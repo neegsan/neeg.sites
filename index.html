@@ -97,6 +97,7 @@
         }
 
         .topnav {
+            padding: 1rem 1.5rem 1rem 1.5rem;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -107,28 +108,9 @@
             width: 100%;
             position: fixed;
             backdrop-filter: blur(20px);
-            padding: 1rem 1.5rem 1rem 1.5rem;
+            -webkit-backdrop-filter: blur(20px);
         }
 
-        .topnav::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-
-            /* replace background-image url with your image */
-
-            /* note that if you use a local file as the image you should replace the url like: '/path/to/image'  */
-
-            background-image: url(images/banner/navbar.png);
-            background-size: cover;
-            background-position: center;
-            filter: blur(20px);
-            opacity: 0.4;
-            z-index: -1;
-        }
 
         .topnav a {
             float: left;

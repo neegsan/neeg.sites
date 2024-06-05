@@ -557,10 +557,10 @@
     <header>
         <!-------------------- Menu Navigation --------------------->
         <nav class="topnav" id="menuBar">
-            <a class="logo" href="#hero"><img src="images/logos/mainlogo.png" width="95px" height="46px"></a>
-            <a class="items" href="#hero">Home</a>
-            <a class="items" href="#services">Serviços</a>
-            <a class="items" href="#about">Sobre Nós</a>
+            <a class="logo" href="index.html#hero"><img src="images/logos/mainlogo.png" width="95px" height="46px"></a>
+            <a class="items" href="index.html#hero">Home</a>
+            <a class="items" href="index.html#services">Serviços</a>
+            <a class="items" href="index.html#about">Sobre Nós</a>
             <a class="items" href="#cta">Contato</a>
             <a class="items" href="#social">Redes Sociais</a>
             <a href="javascript:void(0);" class="icon" id="menu" onclick="navBar()">Menu</a>
@@ -598,7 +598,7 @@
             class="footer-logo" />
         <div class="footer-content">
             <ul>
-                <li><a href="">Política de privacidade</a></li>
+                <li><a href="politicas-de-privacidade.html">Política de privacidade</a></li>
             </ul>
         </div>
 
@@ -635,21 +635,6 @@
                 menuBar.className = "topnav";
             }
         }
-
-        document.querySelectorAll('.topnav a.items').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                let targetId = this.getAttribute('href').substring(1);
-                document.getElementById(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                let menuBar = document.getElementById("menuBar");
-                if (menuBar.className.includes("responsive")) {
-                    menuBar.className = "topnav";
-                }
-                document.getElementById('menu').textContent = 'Menu';
-            });
-        });
 
         document.getElementById('menu').addEventListener('click', function () {
             let button = this;

@@ -7,11 +7,10 @@
     <meta name="description"
         content="Descubra como a Neeg pode transformar sua presença online com websites personalizados e gestão de tráfego eficaz. Mais que um site, uma experiência. Vamos conversar sobre seu projeto!">
     <title>Neeg | Transforme Seu Negócio com Sites Únicos e Experiências Digitais Inovadoras</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Nanum+Gothic&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon-32x32.png">
     <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon-16x16.png">
@@ -24,8 +23,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Cantarell", sans-serif;
-            font-weight: 400;
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
             font-style: normal;
             line-height: 1;
             color: #194D33;
@@ -38,8 +38,47 @@
             background-color: #8CDCDA;
         }
 
-        p {
-            font-size: 1.3rem;
+        /* ---------------- font sizes --------------*/
+        body p,
+        .hero-button {
+            font-size: 17.6px;
+            font-weight: 200;
+        }
+
+        h1 {
+            font-size: 45.2900852px;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 31.490325px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 27.9914px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .cta-button {
+            font-size: 17.6px;
+        }
+
+        .copy-right {
+            font-size: 17.6px;
+            font-weight: 300;
+        }
+
+        .details {
+            font-weight: 200;
+            font-size: 15px;
+        }
+
+        footer ul li a {
+            font-size: 17.6px;
+            font-weight: 300;
         }
 
         /* ---------------- all devices --------------*/
@@ -48,6 +87,13 @@
         .logo {
             position: relative;
             left: 0;
+            top: .35rem;
+
+        }
+
+        .logo img {
+            width: auto;
+            height: 38px;
         }
 
         .topnav {
@@ -57,6 +103,7 @@
             align-items: center;
             overflow: hidden;
             background-color: rgba(0, 0, 0, .2);
+            height: 48px;
             width: 100%;
             position: fixed;
             backdrop-filter: blur(5px);
@@ -90,7 +137,9 @@
             }
 
             .logo {
-                position: relative;
+                position: absolute;
+                left: 1.5rem;
+                top: .35rem;
             }
 
             .topnav a:not(:first-child) {
@@ -107,16 +156,29 @@
             }
 
             .topnav.responsive {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 position: fixed;
                 min-height: 100vh;
                 background: rgba(0, 0, 0, .2);
+                animation: slideDown 0.5s ease-out forwards;
+            }
+
+            @keyframes slideDown {
+                0% {
+                    transform: translateY(-100%);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
             }
 
             .topnav .icon {
                 position: absolute;
-                right: 1.5em;
-                top: 1.5em;
+                right: 1.5rem;
+                top: 1rem;
             }
 
             .topnav.responsive a {
@@ -132,11 +194,6 @@
             border-radius: 2em 0 2em 0;
         }
 
-        h2,
-        h3 {
-            font-weight: bold;
-        }
-
         footer img {
             max-width: 124px;
             max-height: 60.19px;
@@ -148,7 +205,6 @@
             background-color: #F9CB40;
             border: none;
             border-radius: 2em;
-            width: 100%;
         }
 
         .hero-section {
@@ -180,14 +236,9 @@
             background-color: #ffffff;
         }
 
-        /*--------------------- iPhone 5 e SE ---------------------*/
+        /*--------------------- iPhone 4 ao SE ---------------------*/
 
         @media (max-width:374.09px) {
-
-            /*--------- All Devices ---------*/
-            h1 {
-                font-size: 2rem;
-            }
 
             /*--------- All Sections ---------*/
             .hero-section,
@@ -195,7 +246,7 @@
             .about,
             .cta,
             footer {
-                padding: 15vh 1rem 15vh 1rem;
+                padding: 20vh 1rem 20vh 1rem;
             }
 
             /*--------- Hero Section ---------*/
@@ -204,24 +255,23 @@
                 flex-direction: column;
                 align-items: center;
                 height: 100vh;
-                justify-content: space-between;
+                justify-content: space-evenly;
             }
 
             .hero-banner {
-                width: 80%;
+                width: 50%;
             }
 
             .hero-content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                height: 25vh;
-                justify-content: space-between;
+                height: 39vh;
+                justify-content: space-around;
             }
 
             .hero-button {
-                height: 3rem;
-                font-size: 1.3rem;
+                padding: 1rem 1.5rem 1rem 1.5rem;
             }
 
             /*--------- Service Section ---------*/
@@ -233,18 +283,16 @@
                 background: linear-gradient(#D4E2EE, #A9C5DC);
                 padding: 1.5em;
                 border-radius: 2em;
-                margin-top: 3rem;
                 width: 100%;
-                height: 39rem;
+                height: auto;
             }
 
-            .container h3,
-            .services h2 {
-                text-align: center;
+            .container:not(:last-child) {
+                margin-bottom: 1.5rem;
             }
 
             .services h2 {
-                margin-bottom: .5rem;
+                margin-bottom: 7rem;
             }
 
             .services h3 {
@@ -301,7 +349,6 @@
                 border: none;
                 color: #ffffff;
                 background-color: #286DA8;
-                font-size: 1rem
             }
 
             /*--------------- Footer -----------------*/
@@ -345,16 +392,12 @@
 
             .copy-right {
                 color: #ffffff;
-                font-size: 1rem;
-                font-weight: normal;
                 padding-top: 2rem;
             }
 
             .details {
                 padding-top: 2rem;
                 color: #ffffff;
-                font-size: small;
-                font-weight: normal;
             }
 
         }
@@ -369,51 +412,37 @@
                 padding: 0 1.5em 0 1.5em;
             }
 
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-                margin-bottom: 3rem;
-                width: 100%;
-            }
-
-            h3 {
-                font-size: 1.5rem;
-                width: 100%;
-            }
-
-            p {
-                font-size: 1.3rem;
-            }
-
             .services,
             .about,
             .cta,
             footer {
                 padding: 15vh 1.5em 15vh 1.5em;
             }
+
+            .services h2,
+            .about h2,
+            .cta h2 {
+                margin-bottom: 3rem;
+            }
+
             /*--------------- Hero Section -----------------*/
 
             .hero-section {
                 padding: 7em 1.5em 0 1.5em;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 align-items: center;
                 height: 85vh;
                 margin-bottom: 15vh;
             }
 
             .hero-banner {
-                width: 80%;
+                width: 60%;
             }
 
             .hero-button {
-                height: 2.5em;
-                background-color: #F9CB40;
-                font-size: 1.5em;
+                padding: 1rem 2rem 1rem 2rem;
             }
 
             .hero-content {
@@ -434,14 +463,16 @@
                 background: linear-gradient(#D4E2EE, #A9C5DC);
                 padding: 1.5em;
                 border-radius: 2em;
-                margin-top: 3rem;
                 width: 100%;
-                height: 35rem;
             }
 
             .container h3,
             .services h2 {
                 text-align: center;
+            }
+
+            .container:not(:last-child) {
+                margin-bottom: 1.5rem;
             }
 
             .services h3 {
@@ -477,7 +508,6 @@
                 border-radius: 2rem;
                 text-align: -webkit-center;
                 margin-bottom: 1rem;
-                font-size: 1.3rem;
             }
 
             .mensage textarea {
@@ -499,7 +529,6 @@
                 border: none;
                 color: #ffffff;
                 background-color: #286DA8;
-                font-size: 1.3rem
             }
 
             /*--------------- Footer -----------------*/
@@ -543,7 +572,6 @@
 
             .copy-right {
                 color: #ffffff;
-                font-size: 1rem;
                 font-weight: normal;
                 padding-top: 2rem;
             }
@@ -560,65 +588,26 @@
         @media (min-width:390px) {
 
             /*--------------- Hero Section -----------------*/
-            .hero-banner {
-                width: 307.8px;
-                height: 314.72px;
-            }
-
-            .hero-section h1 {
-                font-size: 3rem;
-            }
-
             .hero-content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                height: 30vh;
-                justify-content: space-between;
+                height: 35vh;
+                justify-content: space-evenly;
             }
 
-            /*------------ All devices -------------------*/
-
-            h2 {
-                font-size: 2.5rem;
+            .hero-button {
+                padding: 1rem 2.5rem 1rem 2.5rem;
             }
-
-            h3 {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 1.3rem;
-            }
-
         }
 
         @media (min-width:480px) {
 
             /*--------------- Hero Section -----------------*/
-            .hero-section h1 {
-                font-size: 3rem;
-            }
+
 
             /*--------------- Service Section -----------------*/
-            .container {
-                height: 35rem;
-            }
 
-            .service h2 {
-                font-size: 3.5rem;
-                width: 100%;
-            }
-
-            .service h3 {
-                font-size: 3rem;
-                width: 100%;
-            }
-
-            /*------------ All devices -------------------*/
-            p {
-                font-size: 1.2rem;
-            }
         }
 
         @media (min-width:496px) {
@@ -638,32 +627,16 @@
             .footer {
                 padding: 18vh 2.5em 15vh 2.5em;
             }
-
-            /*--------------- Service Section -----------------*/
-            .container {
-                height: 29rem;
-            }
         }
 
         /* Medium devices (landscape tablets, 768px and up) */
         @media (min-width:768px) {
 
             /*------------ Hero Section ------------*/
-            .hero-section h1 {
-                font-size: 4rem;
-            }
-
             .hero-button {
-                width: 65%;
-            }
-
-            /*------------ Services Section ----------*/
-            .container {
-                height: 23rem;
+                padding: 1.5rem 3rem 1.5rem 3rem;
             }
         }
-
-        @media (min-width:881px) {}
 
         /* Large devices (laptops/desktops, 992px and up) */
         @media (min-width:992px) {
@@ -683,23 +656,10 @@
                 margin-bottom: 0;
             }
 
-            .hero-section h1 {
-                font-size: 5rem;
-            }
-
             .hero-banner {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-            }
-
-            .hero-button {
-                width: 70%;
-            }
-
-            /*----------- Services Section ----------*/
-            .container {
-                height: 20rem;
             }
         }
 
@@ -735,7 +695,7 @@
             }
 
             .hero-button {
-                width: 60%;
+                padding: 2rem 3.5rem 2rem 3.5rem;
             }
 
             /*------------- Sevices Section -----------*/
@@ -747,7 +707,11 @@
 
             .container {
                 width: 30%;
-                height: 38rem;
+                height: auto;
+            }
+
+            .container:not(:last-child) {
+                margin-bottom: 0;
             }
 
             .form {
@@ -770,6 +734,15 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
+            }
+
+            .about h2 {
+                text-align: left;
+            }
+
+            .about-banner img {
+                margin-bottom: 0;
             }
 
             .about-content {
@@ -821,7 +794,7 @@
 
             .container {
                 width: 30%;
-                height: 31rem;
+                height: auto;
             }
 
             .form {
@@ -844,6 +817,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
             }
 
             .about-content {
@@ -858,9 +832,11 @@
         <!-------------------- Menu Navigation --------------------->
         <nav class="topnav" id="menuBar">
             <a class="logo" href="#hero"><img src="images/logos/mainlogo.png" width="95px" height="46px"></a>
+            <a class="items" href="#hero">Home</a>
             <a class="items" href="#services">Serviços</a>
             <a class="items" href="#about">Sobre Nós</a>
             <a class="items" href="#cta">Contato</a>
+            <a class="items" href="#social">Redes Sociais</a>
             <a href="javascript:void(0);" class="icon" id="menu" onclick="navBar()">Menu</a>
         </nav>
     </header>
@@ -873,8 +849,8 @@
                 title="Cubo" />
         </div>
         <div class="hero-content">
-            <h1>Mais que um site, uma experiência</h1>
-            <button class="hero-button">conversar sobre projeto</button>
+            <h1>Sites únicos, <br> experiências únicas</h1>
+            <button class="hero-button">explorar soluções</button>
         </div>
     </section>
 
@@ -936,28 +912,28 @@
     </section>
 
     <section class="cta" id="cta">
-        <h2>Entre em contato conosco</h2>
-        <div class="form">
-            <div class="email-whatsapp">
-                <input type="email" name="email" placeholder="Seu melhor e-mail" required />
-                <input type="number" name="whats" placeholder="Seu número de WhatsApp" required />
+        <form action="https://formsubmit.co/hello@neeg.com.br" method="post" class="forms-container">
+            <h2>Entre em contato conosco</h2>
+            <div class="form">
+                <div class="email-whatsapp">
+                    <input type="email" name="email" placeholder="Seu melhor e-mail" required />
+                    <input type="number" name="whats" placeholder="Seu número de WhatsApp" required />
+                </div>
+                <div class="mensage">
+                    <textarea type="text" name="mensagem" placeholder="Escreva uma mensagem"></textarea>
+                    <input type="hidden" name="_next" value="https://thanks.html" />
+                </div>
             </div>
-            <div class="mensage">
-                <textarea type="text" name="mensagem" placeholder="Escreva uma mensagem"></textarea>
-                <input type="hidden" name="_next" value="https://obrigado.html" />
-            </div>
-        </div>
-        <button class="cta-button" type="submit">enviar mensagem</button>
+            <button class="cta-button" type="submit">enviar mensagem</button>
+        </form>
     </section>
 
-    <footer>
+    <footer id="social">
         <img src="images/logos/footerlogo.png" width="309px" height="150px" alt="" title="Logo do rodapé"
             class="footer-logo" />
         <div class="footer-content">
             <ul>
                 <li><a href="">Política de privacidade</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Sobre nós</a></li>
             </ul>
         </div>
 
@@ -986,15 +962,29 @@
     </footer>
 
     <script>
-        //identifica pelo id e acrescenta a classe
         function navBar() {
-            let x = document.getElementById("menuBar");
-            if (x.className === "topnav") {
-                x.className += " responsive";
+            let menuBar = document.getElementById("menuBar");
+            if (menuBar.className === "topnav") {
+                menuBar.className += " responsive";
             } else {
-                x.className = "topnav";
+                menuBar.className = "topnav";
             }
         }
+
+        document.querySelectorAll('.topnav a.items').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                let targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                let menuBar = document.getElementById("menuBar");
+                if (menuBar.className.includes("responsive")) {
+                    menuBar.className = "topnav";
+                }
+                document.getElementById('menu').textContent = 'Menu';
+            });
+        });
 
         document.getElementById('menu').addEventListener('click', function () {
             let button = this;
@@ -1003,21 +993,6 @@
             } else {
                 button.textContent = 'Menu';
             }
-        });
-
-        // Função para fechar o menu responsivo ao clicar em um link
-        function closeMenu() {
-            let menuBar = document.getElementById("menuBar");
-            if (menuBar.className.includes("responsive")) {
-                menuBar.className = "topnav";
-            }
-            // Optionally reset the button text to 'Menu'
-            document.getElementById('menu').textContent = 'Menu';
-        }
-
-        // Adiciona o evento de clique a todos os elementos com id "items" e classe "items"
-        document.querySelectorAll('.items').forEach(item => {
-            item.addEventListener('click', closeMenu);
         });
     </script>
 
